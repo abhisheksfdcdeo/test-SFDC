@@ -12,13 +12,15 @@
      var clientId = "3MVG9d8..z.hDcPLhC37A41kWCOjVkpVUMIMf4qHnQf5fhbUgKXezQpeYZVHPbPAinusS.PMCKQ==";
      var consumerSecret = "513430661611777496";
      //Authorization endpoint
-     var authEndPoint = "https://login.salesforce.com/services/oauth2/authorize";
-     //response_type must be set to token
-     var responseType = "token";
+     var authEndPoint = "https://login.salesforce.com/services/oauth2/token";
+
+
+     var paramstring = 'grant_type=password&client_id='+clientId+'&client_secret='+consumerSecret+'&username=abhishek_sfdc%40salesforce.com&password=Welcome1rs@bhi'
      //This is the callback URL from the connected app
      var redirectURI = "https://abhisheksfdcdeo.github.io/test-SFDC/UseRESTAPI";
      //Construct the URL with the required parameters
-     var requestURL = authEndPoint+'?client_id='+clientId+'&response_type='+responseType+'&redirect_uri='+redirectURI;
+     var requestURL = authEndPoint+'?'+paramstring;
+     console.log('my URL ' + requestURL);
      //redirect the user to the endpoint 
      window.location = requestURL;
      });
