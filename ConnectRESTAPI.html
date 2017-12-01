@@ -58,7 +58,7 @@
         $inputs.prop("disabled", true);
         // Fire off the request to /form.php
         request = jq.ajax({
-          url: "https://sfdc-cors.herokuapp.com/services/oauth2/token",
+          url: "https://login.salesforce.com/services/oauth2/token",
           dataType: 'jsonp',
           contentType: "multipart/form-data",
           type: "post",
