@@ -57,6 +57,7 @@
         // Fire off the request to /form.php
         request = jq.ajax({
           url: "https://login.salesforce.com/services/oauth2/token",
+          contentType: "multipart/form-data",
           type: "post",
           data: serializedData
         });
