@@ -45,7 +45,7 @@
              request.abort();
          }
          // setup some local variables
-         var $form = $(this);
+         var $form = jq(this);
          // Let's select and cache all the fields
          var $inputs = $form.find("input, select, button, textarea");
          // Serialize the data in the form
@@ -55,7 +55,7 @@
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
         // Fire off the request to /form.php
-        request = $.ajax({
+        request = jq.ajax({
           url: "https://login.salesforce.com/services/oauth2/token",
           type: "post",
           data: serializedData
