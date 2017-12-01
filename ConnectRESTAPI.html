@@ -33,10 +33,11 @@
    </table>
    </form>
    <script type="text/javascript">
+        var jq=jQuery.noConflict();
          // Variable to hold request
          var request;
          // Bind to the submit event of our form
-        $("#foo").submit(function(event){
+        jq("#foo").submit(function(event){
           // Prevent default posting of form - put here to work in case of errors
           event.preventDefault();
          // Abort any pending request
