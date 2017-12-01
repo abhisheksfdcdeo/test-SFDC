@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  </head>
  <body>
@@ -57,6 +59,7 @@
         // Fire off the request to /form.php
         request = jq.ajax({
           url: "https://sfdc-cors.herokuapp.com/services/oauth2/token",
+          dataType: 'jsonp',
           contentType: "multipart/form-data",
           type: "post",
           data: serializedData
