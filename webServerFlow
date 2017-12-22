@@ -1,0 +1,40 @@
+<html>
+<head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                          sURLVariables = sPageURL.split('&'),
+                          sParameterName,i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+          };
+       }
+        
+        $("#button").click( function(){
+              alert(getUrlParameter("code"));
+           }
+        ); 
+      </script>
+</head>
+<body>
+ <h3>REST API With Javascript</h3>
+  
+  <form id="foo" action = "https://login.salesforce.com/services/oauth2/token" method="post" enctype="multipart/form-data">
+         <table>
+            <tr>
+             <td>Get Authorization code</td>
+            <td><input type="button" name = "authCode" id="button" value="Get Auth Code"></td>
+           </tr>
+           
+       </table>
+   </form>
+</body>
+</html>
