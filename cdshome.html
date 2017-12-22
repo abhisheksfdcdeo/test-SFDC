@@ -30,7 +30,8 @@ a.nav-link:active
                 var url =  'https://fontevacustomer-15623193070--1604b25115b.force.com/services/oauth2/authorize?response_type=code';
                  url = url + '&client_id=3MVG9g9rbsTkKnAVkL43VfEsCgmr4gqZoNaKhn4AjkIEBcqUg9PVbpFUnZDJeJitZINqh2yD9NAt5etBVeNoh';
                  url = url + '&redirect_uri=https://abhisheksfdcdeo.github.io/test-SFDC/webServerFlow.html&state=mystate';
-                 window.location.href = url;
+                 window.location.replace(url);
+                 return false;
    
             }); 
          });
