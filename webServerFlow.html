@@ -18,6 +18,7 @@
           };
          $("#btn").click( function(){
                   var contents = decodeURIComponent(getUrlParameter("code"));
+                  contents = contents + '==';
                   console.log(contents);
                   $("#code").val(contents);
             }); 
