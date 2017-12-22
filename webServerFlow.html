@@ -17,7 +17,9 @@
                 }
           };
          $("#button").click( function(){
-            alert(getUrlParameter("code"));
+                  var contents = getUrlParameter("code");
+                  console.log(contents);
+                  $("#authCode").val(contents);
             }); 
               
        });        
@@ -28,6 +30,11 @@
   
   <form id="foo" action = "https://login.salesforce.com/services/oauth2/token" method="post" enctype="multipart/form-data">
          <table>
+            <tr>
+             <td>Get Authorization code</td>
+             <td><input type="text" name = "authCode" id="authCode" value="" /></td>
+           </tr>
+               
             <tr>
              <td>Get Authorization code</td>
             <td><input type="button" name = "authCode" id="button" value="Get Auth Code" /></td>
