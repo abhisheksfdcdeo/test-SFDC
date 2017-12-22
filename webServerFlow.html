@@ -19,7 +19,7 @@
          $("#button").click( function(){
                   var contents = getUrlParameter("code");
                   console.log(contents);
-                  $("#authCode").val(contents);
+                  $("#code").val(contents);
             }); 
               
        });        
@@ -28,17 +28,30 @@
 <body>
  <h3>REST API With Javascript</h3>
   
-  <form id="foo" action = "https://login.salesforce.com/services/oauth2/token" method="post" enctype="multipart/form-data">
+  <form id="foo" action = "https://fontevacustomer-15623193070--1604b25115b.force.com/services/oauth2/token" method="post" enctype="multipart/form-data">
          <table>
             <tr>
              <td>Get Authorization code</td>
-             <td><input type="text" name = "authCode" id="authCode" value="" /></td>
+             <td><input type="text" name = "code" id="code" value="" /></td>
            </tr>
+           <tr>
+             <td>Grant Type</td>
+             <td><input type="text" name = "grant_type" id="grant_type" value="authorization_code" /></td>
+           </tr>    
+           <tr>
+             <td>Client ID</td>
+             <td><input type="text" name = "client_id" id="client_id" value="3MVG9g9rbsTkKnAVkL43VfEsCgmr4gqZoNaKhn4AjkIEBcqUg9PVbpFUnZDJeJitZINqh2yD9NAt5etBVeNoh" /></td>
+           </tr>
+           <tr>
+             <td>Client Secret</td>
+             <td><input type="text" name = "client_secret" id="client_secret" value="6757196660999948482" /></td>
+           </tr>    
                
             <tr>
-             <td>Get Authorization code</td>
-            <td><input type="button" name = "authCode" id="button" value="Get Auth Code" /></td>
+             <td>Redirect URI</td>
+            <td><input type="text" name = "redirect_uri" id="redirect_uri" value="https%3A%2F%2Fabhisheksfdcdeo.github.io/test-SFDC/webServerFlow.html" /></td>
            </tr>
+          
            
        </table>
    </form>
