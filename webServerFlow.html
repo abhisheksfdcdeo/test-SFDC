@@ -19,7 +19,7 @@
          $("#button").click( function(){
                   var contents = getUrlParameter("code");
                   console.log(contents);
-                  $("#code").val(contents);
+                  $("#btn").val(contents);
             }); 
               
        });        
@@ -32,6 +32,10 @@
          <table>
             <tr>
              <td>Get Authorization code</td>
+             <td><input type="button" name = "btn" id="btn" value="Get Auth Code" /></td>
+           </tr>   
+            <tr>
+             <td>Authorization code</td>
              <td><input type="text" name = "code" id="code" value="" /></td>
            </tr>
            <tr>
